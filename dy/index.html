@@ -41,7 +41,7 @@ h3{color:#ccc;margin:0;font:.6em '微软雅黑';text-transform:uppercase;letter-
 
 
 <script type="text/javascript">
-function player(){$.post("/api/api.php", {"206":"1","time":"1553227426","key": desn($('#hdMd5').val()), "key2": "5b5e7d0e15ebda7925386c62dee0fb24", "url": "https://www.iqiyi.com/v_19rrf95tfg.html","type": "","vid": "","vkey": ""},
+function player(){$.post("https://jx.dy-jx.com/api/api.php", {"206":"1","time":"1553227426","key": desn($('#hdMd5').val()), "key2": "5b5e7d0e15ebda7925386c62dee0fb24", "url": "https://www.iqiyi.com/v_19rrf95tfg.html","type": "","vid": "","vkey": ""},
 function(data){if(data['success'] == 1){new_url =data['url'] ;
 var isiPad = navigator.userAgent.match(/iPad|iPhone|Linux|Android|iPod/i) != null;
 if(data['play'] == 'qydp'){
@@ -87,7 +87,7 @@ $('#a1').html('<video src="'+data['url']+'" controls="controls" width="100%" hei
 var meta='<meta name="referrer" content="no-referrer">';$("head").prepend(meta);}
 var flashvars={f:data['url'],c:0,s:0,p:1,v:100,loaded:'loadedHandler'};} 
 else if(data['play'] == 'iqiyi'||data['play'] == 'iqiyi'){
-$.ajax({url: 'http://data.video.iqiyi.com/v.mp4',
+$.ajax({url: 'https://data.video.iqiyi.com/v.mp4',
 success: function(e) {var reg = e.data.l.match(/\d+\.\d+\.\d+\.\d+/);var ip = data['url'].match(/\d+\.\d+\.\d+\.\d+/);
 data['url'] = data['url'].replace(ip,reg);
 if(data['play'] == 'iqiyi'){
