@@ -35,7 +35,7 @@ h3{color:#ccc;margin:0;font:.6em '微软雅黑';text-transform:uppercase;letter-
 #a2{ left:0} 	
 }
 </style>
-//<script type="text/javascript" src="./ckplayerg/md5k.js"></script>
+<!--<script type="text/javascript" src="./ckplayerg/md5k.js"></script>-->
 <script src="./ckplayerg/jquery.min.js"></script>
 <script type="text/javascript" src="./ckplayerg/ckplayer.js" charset="utf-8"></script>
 
@@ -93,11 +93,11 @@ data['url'] = data['url'].replace(ip,reg);
 if(data['play'] == 'iqiyi'){
 $('#a1').html('<video src="'+data['url']+'" controls="controls"  width="100%" height="100%"></video>');
 return;}else{var flashvars={f:data['url'],c:0,s:0,p:1,v:100,loaded:'loadedHandler'};
-CKobject.embedSWF('https://jx.dy-jx.com/ckplayerg/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);}}
+CKobject.embedSWF('./ckplayerg/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);}}
 });
 }else{var flashvars={f:''+data['url'],c:0,s:2,p:1,v:100};}//pptv
 var params={bgcolor:'#FFF',allowFullScreen:true,allowScriptAccess:'always',wmode:'transparent'};
-CKobject.embedSWF('https://jx.dy-jx.com/ckplayerg/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);}
+CKobject.embedSWF('./ckplayerg/ckplayer.swf','a1','ckplayer_a1','100%','100%',flashvars,params);}
 $('#loading').hide();
 $('#a1').show();
 }else{
@@ -138,12 +138,12 @@ function GetQueryString(name){
 <h2 class="timeout" style="display:none;color:#f90;">高科技资源响应超时，请刷新重试！</h2>
 </div>
 
-<link rel="stylesheet" href="/ckplayerg/DPlayer.min.css">
-<script type="text/javascript" src="/ckplayerg/hls.min.js"></script>
-<script type="text/javascript" src="/ckplayerg/DPlayer.min.1.js" charset="utf-8"></script>
+<link rel="stylesheet" href="./ckplayerg/DPlayer.min.css">
+<script type="text/javascript" src.="/ckplayerg/hls.min.js"></script>
+<script type="text/javascript" src="./ckplayerg/DPlayer.min.1.js" charset="utf-8"></script>
 <!--script type="text/javascript" src="/ckplayerg/md.js"></script-->
-<script type="text/javascript" src="/ckplayerg/cky.js"></script>
-<script type="text/javascript" src="/ckplayerg/flv.min.js"></script>
+<script type="text/javascript" src="./ckplayerg/cky.js"></script>
+<script type="text/javascript" src="./ckplayerg/flv.min.js"></script>
 <script type="text/javascript">
 function tipstime(count){
     $('.timemsg').text(count);
