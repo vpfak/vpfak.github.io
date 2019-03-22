@@ -1,0 +1,77 @@
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>VIP视频解析源码 - vip.aixc.cn</title>
+<meta name="keywords" content="VIP在线解析,视频VIP在线解析,VIP视频在线解析">
+<meta name="description" content="本站为广大网友提供优酷VIP解析，爱奇艺VIP解析，腾讯VIP解析，乐视VIP解析，芒果VIP解析等解析源码下载，让你省去购买视频VIP费用，欢迎大家收藏本站，并将它介绍给您的朋友！">
+<meta name="viewport" content="width=device-width,anicital-scale=1">
+<link rel="stylesheet" href="jscss4/bootstrap.min.css">
+<link rel="stylesheet" href="jscss4/style.css">
+</head>
+<body>
+<header>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- 手机自适应样式 -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">导航切换</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<!--logo图标-->
+					<a href="http://vip.aixc.cn/mvip/"><img src="jscss4/viplogo.png" /></a>
+				</div>
+				<!-- pc导航样式 -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<!--导航 右侧-->
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="http://vip.aixc.cn/mvip/vip.aixc.cn_vipyuanma.zip" target="_blank">下载此源码</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
+</header>
+
+<!--视频box区域-->
+<div class="container-fluid video-box">
+	<div class="container ">
+		<iframe id="palybox" src="http://vip.gzzza.com/vip.php?url=" allowtransparency="true" frameborder="0" scrolling="no"></iframe>
+		<div class="url-box">
+			<div class="input-group">
+				<input type="text" id="url" class="form-control url-text" aria-label="Text input with segmented button dropdown" placeholder="请在这粘贴视频网址" title="请复制你想要看的视频网址，粘贴到此处点击播放即可！" value="http://www.iqiyi.com/v_19rrf95tfg.html">
+				<div class="input-group-btn">
+					<button type="button" class="btn btn-default btn-play" title="点击开始解析并开始播放" onclick="play()">解析播放</button>
+				</div>
+			</div>
+
+		</div>
+		<div class="tit-gg">
+			<div>若视频播放异常，尝试刷新或更换接口即可解决！</div>
+			<iframe src="https://www.zzidc.com/index.action?pand=SgtyWhaQBps=" width="40" height="30"></iframe>
+			<div>推荐使用【<a href="http://free.aixc.cn/host.html" target="_blank">10M主机</a>】+【<a href="http://vip.aixc.cn/mvip/vipyuanma.zip" target="_blank">VIP视频源码</a>】，搭建全能VIP视频解析站！！！<a href="http://free.aixc.cn/host.html" target="_blank">领取主机</a></div>
+			<div>推荐全套《VIP视频解析网站搭建全套图文教程》 <a href="http://www.tanxingcai.com/vipjiexi/" target="_blank">立即学习</a></div>
+		</div>
+	</div>
+</div>
+
+<script>
+function play() {
+	var rul = document.getElementById("url").value; //获取input链接
+	if(rul == "") {
+		alert("vip解析提示您：请输入链接，没连接我给你解析个毛线")
+	} else {
+
+		var paly = document.getElementById("palybox"); //获取播放窗口位置
+		var jkv = "http://vip.gzzza.com/vip.php?url=";
+		paly.src = jkv + rul; //接口赋值
+	}
+}
+</script>
+</body></html>

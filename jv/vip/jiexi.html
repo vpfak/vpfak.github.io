@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta name="referrer" content="never">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+<title>智能解析</title>
+<style type="text/css">body,html,.content{background-color:black;padding: 0;margin: 0;width:100%;height:100%;color:#999;}@-webkit-keyframes run {0% {-webkit-transform: scale(1);transform: scale(1);}50% {-webkit-transform: scale(1);transform: scale(1);}65% {-webkit-transform: scale(0.95);transform: scale(0.95);} 80% {-webkit-transform: scale(1.05);  transform: scale(1.05);} 90% {-webkit-transform: scale(0.95);  transform: scale(0.95);} 100% {-webkit-transform: scale(1);  transform: scale(1);} }  @keyframes run {0% {-webkit-transform: scale(1);transform: scale(1);}50% {-webkit-transform: scale(1);transform: scale(1);}65% {-webkit-transform: scale(0.95);transform: scale(0.95);} 80% {-webkit-transform: scale(1.05);  transform: scale(1.05);} 90% {-webkit-transform: scale(0.95);  transform: scale(0.95);} 100% {-webkit-transform: scale(1);  transform: scale(1);} }</style></head>
+<body style="overflow-y:hidden;">
+<div style="height:36px;"></div>
+<div style="margin:-36px auto;width:100%;height:100%;">
+	<div id="a1"></div>
+</div>
+<script type="text/javascript"> 
+function GetQueryString(name)
+{
+     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+     var r = window.location.search.substr(1).match(reg);
+     if(r!=null)return  unescape(r[2]); return null;
+}
+    var purl = GetQueryString("url");
+	document.getElementById('a1').innerHTML = '<iframe src="'+purl+'" scrolling="no" allowtransparency="true" frameborder="0" width="100%" scrolling="no" height="100%" align="middle" frameborder="no" hspace="0" vspace="0" allowFullscreen="true" marginheight="0" marginwidth="0" name="tv"></iframe>';
+function playerstop(){
+window.parent.frames.MacPlayer.GoNextUrl();
+return false;
+};
+</script>
+</body></html>
